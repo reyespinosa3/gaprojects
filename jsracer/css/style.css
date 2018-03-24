@@ -1,6 +1,9 @@
+html {
+  background-color: gray;
+}
 header {
   background-color: blue;
-  border-bottom: 5px solid black;
+  border: 5px solid black;
   text-align: center;
   font-size: 20px;
   color: white;
@@ -13,9 +16,22 @@ header {
 }
 main {
   background-color: gray;
-  height: 300px;
+  height: 30px;
+}
+.racer {
+  width:  20px;
+  height: 20px;
+  margin: 5px;
+  border: 1px solid white;
+}
+.red {
+  background-color: red;
+}
+.purple {
+  background-color: purple;
 }
 footer {
   background-color: blue;
   color: black;
+  border: 5px solid black;
 }
