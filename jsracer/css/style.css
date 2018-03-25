@@ -25,6 +25,9 @@ main {
   height: 100px;
   width: 800px;
   border: 3px dashed yellow;
+  position: relative;
+  left: 0;
+  top: 0px;
 }
 #redcar {
   width:  80px;
@@ -32,7 +35,6 @@ main {
   margin: 5px;
   position: absolute;
   border: 1px solid white;
-  background-color: red;
   left: 0;
 }
 #purplecar {
@@ -41,18 +43,7 @@ main {
   margin: 5px;
   position: absolute;
   border: 1px solid white;
-  background-color: purple;
   left: 0;
-}
-#player1 {
-  position: relative;
-  left: 0;
-  top: 0px;
-}
-#player2 {
-  position: relative;
-  left: 0;
-  top: 0px;
 }
 footer {
   background-color: blue;

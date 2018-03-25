@@ -17,6 +17,7 @@ let p1Total = 0;
 let p2Total = 0;
 let countDown = 4;
 
+// reset cars positions and countdown starting point
 const resetRace = () => {
   redLeft = 0;
   purpleLeft = 0;
@@ -26,6 +27,7 @@ const resetRace = () => {
   document.getElementById('timer').innerHTML = "3";
 }
 
+// start the race button, countdown 3, 2, 1, GO
 const letsRace = () => {
   console.log("Start the countdown");
   for (let i=3; i>=0; i--) {
@@ -35,6 +37,9 @@ const letsRace = () => {
   }
 }
 
+// check winner of race, first player to reach end of
+// track (track div box), add point to winner total
+// and update point total on HTML page
 const checkWinner = () => {
   if (redLeft >=750) {
     alert("Player 1 Wins");
@@ -49,7 +54,9 @@ const checkWinner = () => {
   }
 }
 
-const anim = (event) => {
+// listen for d and right arrow keyup, move car and
+// check for winner
+const move = (event) => {
   if (event.keyCode == 39) {
     console.log("red car moved");
     redLeft += 40;
@@ -57,10 +64,12 @@ const anim = (event) => {
     checkWinner();
   }
   if (event.keyCode == 68) {
+    console.log("purple car moved");
     purpleLeft += 40;
     purplecar.style.left = purpleLeft + "px";
     checkWinner();
   }
 }
 
-document.onkeyup = anim;
+// call listen for keyup when page loads
+document.onkeyup = move;
