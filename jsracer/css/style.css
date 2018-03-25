@@ -20,22 +20,55 @@ main {
   background-color: gray;
   height: 30px;
 }
-.cars {
-  display: inline-block;
+.lane {
+  display: block;
+  height: 100px;
+  width: 800px;
+  border: 3px dashed yellow;
 }
-.racer {
-  width:  20px;
-  height: 20px;
+#redcar {
+  width:  80px;
+  height: 80px;
   margin: 5px;
+  position: absolute;
   border: 1px solid white;
-}
-.red {
   background-color: red;
+  left: 0;
 }
-.purple {
+#purplecar {
+  width:  80px;
+  height: 80px;
+  margin: 5px;
+  position: absolute;
+  border: 1px solid white;
   background-color: purple;
+  left: 0;
+}
+#player1 {
+  position: relative;
+  left: 0;
+  top: 0px;
+}
+#player2 {
+  position: relative;
+  left: 0;
+  top: 0px;
 }
 footer {
   background-color: blue;
   color: black;
+}
+#container {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  position:relative;
+}
+#guy {
+  height: 10px;
+  width: 10px;
+  border: 1px solid black;
+  position:absolute;
+  background-color: red;
+  left: 0;
 }
