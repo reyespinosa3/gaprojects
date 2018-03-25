@@ -21,7 +21,6 @@ let p2Total = 0;
 const resetRace = () => {
   redLeft = 0;
   purpleLeft = 0;
-  // countDown = 4;
   redcar.style.left = redLeft + "px";
   purplecar.style.left = purpleLeft + "px";
   document.getElementById('timer').innerHTML = "5";
@@ -59,13 +58,11 @@ const checkWinner = () => {
 // check for winner
 const move = (event) => {
   if (event.keyCode == 39) {
-    // console.log("red car moved");
     redLeft += 40;
     redcar.style.left = redLeft + "px";
     checkWinner();
   }
   if (event.keyCode == 68) {
-    // console.log("purple car moved");
     purpleLeft += 40;
     purplecar.style.left = purpleLeft + "px";
     checkWinner();
