@@ -14,21 +14,33 @@ let purpleLeft = 0;
 let redWin = 0;
 let purpleWin = 0;
 
+const checkWinner = () => {
+  if (redLeft >=720) {
+    alert("Player 1 Wins");
+  } else {
+    if (purpleLeft >= 720) {
+      alert("Player 2 Wins");
+    }
+  }
+}
+
 const anim = (event) => {
   if (event.keyCode == 39) {
     console.log("red car moved");
     redLeft += 40;
     redcar.style.left = redLeft + "px";
-    if (redLeft >= 720) {
-      alert("Red Win!");
-    }
+    checkWinner();
+    // if (redLeft >= 720) {
+    //   alert("Red Win!");
+    // }
   }
   if (event.keyCode == 68) {
     purpleLeft += 40;
     purplecar.style.left = purpleLeft + "px";
-    if (purpleLeft >= 720) {
-      alert("Purple Wins!");
-    }
+    checkWinner();
+    // if (purpleLeft >= 720) {
+    //   alert("Purple Wins!");
+    // }
   }
 }
 
