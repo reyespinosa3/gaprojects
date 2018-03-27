@@ -20,6 +20,12 @@ main {
   background-color: gray;
   height: 30px;
 }
+#p1 {
+  float: left;
+}
+#p2 {
+  float: right;
+}
 .lane {
   display: block;
   height: 100px;
@@ -48,18 +54,4 @@ main {
 footer {
   background-color: blue;
   color: black;
-}
-#container {
-  height: 200px;
-  width: 200px;
-  border: 1px solid black;
-  position:relative;
-}
-#guy {
-  height: 10px;
-  width: 10px;
-  border: 1px solid black;
-  position:absolute;
-  background-color: red;
-  left: 0;
 }

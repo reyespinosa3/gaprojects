@@ -15,6 +15,7 @@ let redWin = 0;
 let purpleWin = 0;
 let p1Total = 0;
 let p2Total = 0;
+let moveIt = 5;
 // let countDown = 4;
 
 // reset cars positions and countdown starting point
@@ -24,6 +25,7 @@ const resetRace = () => {
   redcar.style.left = redLeft + "px";
   purplecar.style.left = purpleLeft + "px";
   document.getElementById('timer').innerHTML = "5";
+  document.getElementById('hard').checked = false;
 }
 
 // start the race button, countdown 5, 4, 3, 2, 1, 0
@@ -41,12 +43,12 @@ const letsRace = () => {
 // track (track div box), add point to winner total
 // and update point total on HTML page
 const checkWinner = () => {
-  if (redLeft >=750) {
+  if (redLeft >=800) {
     alert("Player 1 Wins");
     p1Total += 1;
     document.getElementById('p1score').innerHTML = p1Total;
   } else {
-    if (purpleLeft >= 750) {
+    if (purpleLeft >= 800) {
       alert("Player 2 Wins");
       p2Total += 1;
       document.getElementById('p2score').innerHTML = p2Total;
@@ -58,14 +60,26 @@ const checkWinner = () => {
 // check for winner
 const move = (event) => {
   if (event.keyCode == 39) {
-    redLeft += 40;
-    redcar.style.left = redLeft + "px";
-    checkWinner();
+    if (document.getElementById('hard') === false) {
+      redLeft += 100;
+      redcar.style.left = redLeft + "px";
+      checkWinner();
+    } else {
+      redLeft += 40;
+      redcar.style.left = redLeft + "px";
+      checkWinner();
+    }
   }
   if (event.keyCode == 68) {
-    purpleLeft += 40;
-    purplecar.style.left = purpleLeft + "px";
-    checkWinner();
+    if (document.getElementById('hard') === false) {
+      purpleLeft += 100;
+      purplecar.style.left = purpleLeft + "px";
+      checkWinner();
+    } else {
+      purpleLeft += 40;
+      purplecar.style.left = purpleLeft + "px";
+      checkWinner();
+    }
   }
 }
 
